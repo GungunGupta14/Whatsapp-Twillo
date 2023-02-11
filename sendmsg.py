@@ -1,5 +1,8 @@
 from twilio.rest import Client
-sid='SID_DAALO_APNI'
-auth='PASSWORD_DAALDO'
-client=Client(sid, auth)
-message=client.messages.create(to='whatsapp:+APNA_NUMBER_DAALO', from_ ='whatsapp:+14155238886',body='Hi, this is the test message')
+def message(number,message):
+    sid='ACe30a0cc15a4ecb75e59013d1ab25211f'
+    authToken='e7730d793b1d95a66010fdf6eb444917'
+    client=Client(sid,authToken)
+    
+    message=client.messages.create(to='whatsapp:'+number,
+                from_='whatsapp:+14155238886',body=message)
